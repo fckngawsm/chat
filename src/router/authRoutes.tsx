@@ -1,13 +1,12 @@
-import { Login } from "../pages/auth/Login/Login";
-import { Register } from "../pages/auth/Register/Register";
+import { Auth } from "../components/Auth/Auth";
 
 export const authRoutes = [
   {
     path: "/sign-in",
-    element: <Login />,
+    element: <Auth />,
   },
   {
     path: "/sign-up",
-    element: <Register />,
+    element: <Auth />,
   },
 ];
