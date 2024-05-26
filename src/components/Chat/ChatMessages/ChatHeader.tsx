@@ -36,7 +36,11 @@ export const ChatHeader = () => {
           <ChatHeaderName>Вадим</ChatHeaderName>
         </ChatHeaderUserInformation>
         <CircleContainer ref={menuRef} onClick={() => setDialogIsOpen(true)}>
-          <DotsThreeVertical size={25} weight="bold" color="#3369F3" />
+          <DotsThreeVertical
+            size={25}
+            weight="bold"
+            color={dialogIsOpen ? "#3369F3" : "#1E1E1E"}
+          />
           {dialogIsOpen && <Menu placement="bottom" config={config} />}
         </CircleContainer>
       </ChatHeaderWrapper>

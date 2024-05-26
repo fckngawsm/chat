@@ -1,4 +1,4 @@
-import { ChatHeader } from "./ChatHeader";
+import { ChatHeader } from "../ChatTopPart/ChatHeader";
 import { WrapperMemberList } from "./styled";
 
 interface ChatMembersListProps {
