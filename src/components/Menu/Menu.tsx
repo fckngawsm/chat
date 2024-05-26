@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { MenuConfig } from "../../types/menu-config";
 import { MenuChildren } from "./MenuChildren";
 import { MenuWrapper } from "./styled";
@@ -8,12 +9,12 @@ interface MenuProps {
   placement: MenuPlacement;
 }
 
-export const Menu = ({ config, placement }: MenuProps) => {
+export const Menu = memo(({ config, placement }: MenuProps) => {
   return (
     <MenuWrapper placement={placement}>
-      {config.map(({ icon, text }) => (
-        <MenuChildren icon={icon} text={text} />
+      {config.map((item) => (
+        <MenuChildren {...item} />
       ))}
     </MenuWrapper>
   );
-};
+});
