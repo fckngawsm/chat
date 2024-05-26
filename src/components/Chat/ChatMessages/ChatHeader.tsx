@@ -1,9 +1,14 @@
 import { DotsThreeVertical, Plus, X } from "@phosphor-icons/react";
+import { useMemo } from "react";
+import { useForm } from "react-hook-form";
 import { useDialog } from "../../../hooks/useDialog";
+import { useModal } from "../../../hooks/useModal";
 import { MenuConfig } from "../../../types/menu-config";
 import { Divider } from "../../Divider/Divider";
 import { Menu } from "../../Menu/Menu";
 import { CircleContainer } from "../../Menu/styled";
+import { ModalAddUser } from "../ChatModals/ModalAddUser";
+import { ModalDeleteUser } from "../ChatModals/ModalDeleteUser";
 import {
   ChatHeaderAvatar,
   ChatHeaderName,
@@ -11,19 +16,62 @@ import {
   ChatHeaderWrapper,
 } from "./styled";
 
-const config: MenuConfig[] = [
-  {
-    icon: <Plus size={14} weight="bold" color="#3369F3" />,
-    text: "Добавить пользователя",
-  },
-  {
-    icon: <X size={14} weight="bold" color="#3369F3" />,
-    text: "Удалить пользователя",
-  },
-];
-
 export const ChatHeader = () => {
   const { dialogIsOpen, menuRef, setDialogIsOpen } = useDialog();
+
+  const {
+    isOpen: modalAddUserIsOpen,
+    openModal: openAddUserModal,
+    closeModal: closeAddUserModal,
+    modalRef: modalAddUserRef,
+  } = useModal();
+
+  const {
+    isOpen: modalDeleteUserIsOpen,
+    openModal: openDeleteUserModal,
+    closeModal: closeDeleteUserModal,
+    modalRef: modalDeleteUserRef,
+  } = useModal();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "onSubmit",
+  });
+
+  const config: MenuConfig[] = useMemo(
+    () => [
+      {
+        icon: <Plus size={14} weight="bold" color="#3369F3" />,
+        text: "Добавить пользователя",
+        onClick: () => {
+          openAddUserModal();
+          setDialogIsOpen(false);
+        },
+      },
+      {
+        icon: <X size={14} weight="bold" color="#3369F3" />,
+        text: "Удалить пользователя",
+        onClick: () => {
+          openDeleteUserModal();
+          setDialogIsOpen(false);
+        },
+      },
+    ],
+    [openAddUserModal, openDeleteUserModal, setDialogIsOpen]
+  );
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+    closeAddUserModal();
+  };
+
+  const onSubmitDeleteUser = (data: any) => {
+    console.log(data);
+    closeDeleteUserModal();
+  };
 
   return (
     <>
@@ -45,6 +93,22 @@ export const ChatHeader = () => {
         </CircleContainer>
       </ChatHeaderWrapper>
       <Divider fullWidth={true} />
+      {modalAddUserIsOpen && (
+        <ModalAddUser
+          ref={modalAddUserRef}
+          errors={errors["login"]}
+          onSubmit={handleSubmit(onSubmit)}
+          register={register}
+        />
+      )}
+      {modalDeleteUserIsOpen && (
+        <ModalDeleteUser
+          ref={modalDeleteUserRef}
+          errors={errors["login"]}
+          onSubmit={handleSubmit(onSubmitDeleteUser)}
+          register={register}
+        />
+      )}
     </>
   );
 };
