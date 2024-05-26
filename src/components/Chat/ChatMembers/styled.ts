@@ -13,6 +13,7 @@ export const WrapperMemberList = styled.div`
   min-height: 100vh;
   width: 20%;
   max-width: 310px;
+  min-width: 310px;
   background-color: #fbfbfb;
   border-right: 1px solid #eaeaea;
 `;

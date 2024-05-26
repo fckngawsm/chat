@@ -5,9 +5,9 @@ import {
   MenuChildrenWrapper,
 } from "./styled";
 
-export const MenuChildren = ({ icon, text }: MenuConfig) => {
+export const MenuChildren = ({ icon, text, onClick }: MenuConfig) => {
   return (
-    <MenuChildrenWrapper>
+    <MenuChildrenWrapper onClick={onClick}>
       <CircleContainer>{icon}</CircleContainer>
       <MenuChildrenText>{text}</MenuChildrenText>
     </MenuChildrenWrapper>

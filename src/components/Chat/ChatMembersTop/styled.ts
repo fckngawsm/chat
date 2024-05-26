@@ -20,4 +20,5 @@ export const WrapperMemberHeaderProfile = styled.h2`
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 `;

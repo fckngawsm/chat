@@ -2,7 +2,7 @@ import { CaretRight } from "@phosphor-icons/react";
 import { Search } from "../../Search/Search";
 import { WrapperMemberHeader, WrapperMemberHeaderProfile } from "./styled";
 
-export const ChatHeader = () => {
+export const ChatMembersHeader = () => {
   return (
     <WrapperMemberHeader>
       <WrapperMemberHeaderProfile>
