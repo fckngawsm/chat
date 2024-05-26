@@ -12,9 +12,11 @@ export const MenuWrapper = styled.div<{ placement: MenuPlacement }>`
   position: absolute;
   height: fit-content;
   bottom: ${({ placement }) => (placement === "top" ? "55px" : "0")};
-  top: ${({ placement }) => (placement === "bottom" ? "55px" : "0")};
+  top: ${({ placement }) => (placement === "bottom" ? "55px" : "none")};
   // TODO: вернуться и разобраться
-  right: -10px;
+  right: ${({ placement }) => (placement !== "bottom" ? "none" : "20px")};
+  z-index: 1000;
+  background-color: #ffffff;
 `;
 
 export const MenuChildrenWrapper = styled.div`

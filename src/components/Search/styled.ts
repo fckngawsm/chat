@@ -1,6 +1,8 @@
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import styled from "styled-components";
 
+export type RaduisSize = "s" | "m" | "l";
+
 export const StyledSearchContainer = styled.div`
   position: relative;
   width: 100%;
@@ -20,9 +22,17 @@ export const StyledIcon = styled(MagnifyingGlass)<{ isFocused: boolean }>`
   pointer-events: none;
 `;
 
-export const StyledSearch = styled.input<{ isFocused: boolean }>`
+export const StyledSearch = styled.input<{
+  isFocused: boolean;
+  raduiusSize: RaduisSize;
+}>`
   width: 100%;
-  border-radius: 5px;
+  border-radius: ${({ raduiusSize }) =>
+    raduiusSize && raduiusSize === "s"
+      ? "5px"
+      : raduiusSize === "l"
+      ? "30px"
+      : "15px"};
   padding: 10px 10px 10px ${(props) => (props.isFocused ? "32px" : "32px")};
   background-color: #efefef;
   color: #1e1e1e;
