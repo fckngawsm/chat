@@ -1,13 +1,30 @@
 import { useState } from "react";
-import { StyledIcon, StyledSearch, StyledSearchContainer } from "./styled";
-export const Search = () => {
+import {
+  RaduisSize,
+  StyledIcon,
+  StyledSearch,
+  StyledSearchContainer,
+} from "./styled";
+
+interface SearchProps {
+  placeholder: string;
+  raduiusSize: RaduisSize;
+  viewIcon?: boolean;
+}
+
+export const Search = ({
+  placeholder,
+  raduiusSize,
+  viewIcon = true,
+}: SearchProps) => {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
     <StyledSearchContainer>
-      <StyledIcon size={20} isFocused={isFocused} />
+      {viewIcon && <StyledIcon size={20} isFocused={isFocused} />}
       <StyledSearch
-        placeholder="Поиск"
+        placeholder={placeholder}
+        raduiusSize={raduiusSize}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         isFocused={isFocused}
