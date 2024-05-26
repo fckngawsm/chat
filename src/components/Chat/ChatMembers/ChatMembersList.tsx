@@ -1,4 +1,4 @@
-import { ChatHeader } from "../ChatTopPart/ChatHeader";
+import { ChatMembersHeader } from "../ChatMembersTop/ChatMembersHeader";
 import { WrapperMemberList } from "./styled";
 
 interface ChatMembersListProps {
@@ -8,7 +8,7 @@ interface ChatMembersListProps {
 export const ChatMembersList = ({ children }: ChatMembersListProps) => {
   return (
     <WrapperMemberList>
-      <ChatHeader />
+      <ChatMembersHeader />
       {children}
     </WrapperMemberList>
   );
