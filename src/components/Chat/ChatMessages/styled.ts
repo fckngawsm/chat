@@ -117,3 +117,7 @@ export const ChatDialogMessageDate = styled.h4<{ isMyMessage?: boolean }>`
   bottom: 11px;
   right: 11px;
 `;
+
+export const ChatDialogMessageContent = styled.div`
+  flex-grow: 1;
+`;

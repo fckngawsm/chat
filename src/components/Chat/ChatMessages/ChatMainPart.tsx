@@ -1,15 +1,15 @@
 import { ChatBottomPart } from "../ChatBottomPart/ChatBottomPart";
 import { ChatDialogMessage } from "./ChatDialogMessage";
 import { ChatHeader } from "./ChatHeader";
-import { StyledChatMainPart } from "./styled";
+import { ChatDialogMessageContent, StyledChatMainPart } from "./styled";
 
 export const ChatMainPart = () => {
   return (
     <StyledChatMainPart>
       <ChatHeader />
-      <div style={{ flexGrow: 1 }}>
+      <ChatDialogMessageContent>
         <ChatDialogMessage />
-      </div>
+      </ChatDialogMessageContent>
       <ChatBottomPart />
     </StyledChatMainPart>
   );
