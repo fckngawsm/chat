@@ -1,9 +1,9 @@
 import { ArrowRight, File, Gps, Image } from "@phosphor-icons/react";
 import { useDialog } from "../../../hooks/useDialog";
 import { MenuConfig } from "../../../types/menu-config";
+import { Divider } from "../../Divider/Divider";
 import { Menu } from "../../Menu/Menu";
 import { Search } from "../../Search/Search";
-import { MemberDivider } from "../ChatMembers/styled";
 import {
   ChatBottomPartAttachButton,
   ChatBottomPartSubmitButton,
@@ -29,7 +29,7 @@ export const ChatBottomPart = () => {
   const { dialogIsOpen, menuRef, setDialogIsOpen } = useDialog();
   return (
     <>
-      <MemberDivider />
+      <Divider />
       <ChatBottomPartWrapper>
         <div ref={menuRef}>
           <ChatBottomPartAttachButton

@@ -131,10 +131,3 @@ export const StyledCountUnreadMessage = styled.h4`
   text-align: center;
   color: #ffffff;
 `;
-
-export const MemberDivider = styled.div`
-  width: 96.5%;
-  margin: 2px auto;
-  height: 1px;
-  background-color: #eaeaea;
-`;

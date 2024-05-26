@@ -1,9 +1,9 @@
 import { DotsThreeVertical, Plus, X } from "@phosphor-icons/react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useDialog } from "../../../hooks/useDialog";
 import { MenuConfig } from "../../../types/menu-config";
+import { Divider } from "../../Divider/Divider";
 import { Menu } from "../../Menu/Menu";
 import { CircleContainer } from "../../Menu/styled";
-import { MemberDivider } from "../ChatMembers/styled";
 import {
   ChatHeaderAvatar,
   ChatHeaderName,
@@ -23,45 +23,7 @@ const config: MenuConfig[] = [
 ];
 
 export const ChatHeader = () => {
-  const [dialogIsOpen, setDialogIsOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  const handleClose = useCallback(() => {
-    setDialogIsOpen(false);
-  }, []);
-
-  const handleClickOutside = useCallback(
-    (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        handleClose();
-      }
-    },
-    [handleClose]
-  );
-
-  const handleKeyDown = useCallback(
-    (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        handleClose();
-      }
-    },
-    [handleClose]
-  );
-
-  useEffect(() => {
-    if (dialogIsOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      document.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [dialogIsOpen, handleClickOutside, handleKeyDown]);
+  const { dialogIsOpen, menuRef, setDialogIsOpen } = useDialog();
 
   return (
     <>
@@ -78,7 +40,7 @@ export const ChatHeader = () => {
           {dialogIsOpen && <Menu placement="bottom" config={config} />}
         </CircleContainer>
       </ChatHeaderWrapper>
-      <MemberDivider />
+      <Divider fullWidth={true} />
     </>
   );
 };

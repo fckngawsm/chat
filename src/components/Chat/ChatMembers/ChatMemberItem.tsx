@@ -1,7 +1,7 @@
+import { Divider } from "../../Divider/Divider";
 import {
   MembeLastMessage,
   MemberAvatar,
-  MemberDivider,
   MemberName,
   StyledCountUnreadMessage,
   StyledGeneralInformation,
@@ -15,7 +15,7 @@ import {
 export const ChatMemberItem = () => {
   return (
     <>
-      <MemberDivider />
+      <Divider />
       <WrapperMember isSelected={true}>
         <MemberAvatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbI-_7c6jmIW-XA6pbBuXZyb0TVmrmvBp8rQeh92r_Kw&s" />
         <WrapperMemberInformation>
