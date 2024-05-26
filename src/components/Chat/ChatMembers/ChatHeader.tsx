@@ -9,7 +9,7 @@ export const ChatHeader = () => {
         Профиль
         <CaretRight color="#999999" weight="bold" size={12} cursor="pointer" />
       </WrapperMemberHeaderProfile>
-      <Search />
+      <Search placeholder="Поиск" raduiusSize="s" />
     </WrapperMemberHeader>
   );
 };
