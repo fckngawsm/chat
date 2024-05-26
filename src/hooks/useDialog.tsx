@@ -39,11 +39,12 @@ export const useDialog = () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [dialogIsOpen, handleClickOutside, handleKeyDown]);
+  }, [dialogIsOpen, handleClickOutside, handleKeyDown, handleClose]);
 
   return {
     menuRef,
     setDialogIsOpen,
     dialogIsOpen,
+    handleClose,
   };
 };
