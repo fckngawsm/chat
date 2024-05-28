@@ -1,4 +1,4 @@
-import { Auth } from "../components/Auth/Auth";
+import { Auth } from "../pages/Auth/Auth";
 
 export const authRoutes = [
   {

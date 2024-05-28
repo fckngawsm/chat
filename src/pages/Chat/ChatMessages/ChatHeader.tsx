@@ -1,12 +1,12 @@
 import { DotsThreeVertical, Plus, X } from "@phosphor-icons/react";
 import { useMemo } from "react";
 import { FieldError, useForm } from "react-hook-form";
+import { Divider } from "../../../components/Divider/Divider";
+import { Menu } from "../../../components/Menu/Menu";
+import { CircleContainer } from "../../../components/Menu/styled";
 import { useDialog } from "../../../hooks/useDialog";
 import { useModal } from "../../../hooks/useModal";
 import { MenuConfig } from "../../../types/menu-config";
-import { Divider } from "../../Divider/Divider";
-import { Menu } from "../../Menu/Menu";
-import { CircleContainer } from "../../Menu/styled";
 import { ModalAddUser } from "../ChatModals/ModalAddUser";
 import { ModalDeleteUser } from "../ChatModals/ModalDeleteUser";
 import {

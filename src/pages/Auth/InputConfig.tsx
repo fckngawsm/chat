@@ -1,5 +1,8 @@
 import { RegisterOptions } from "react-hook-form";
-import { CustomInputProps, DefaultInput } from "../TextFields/DefaultInput";
+import {
+  CustomInputProps,
+  DefaultInput,
+} from "../../components/TextFields/DefaultInput";
 import { AUTH_PLACEMENT } from "./constants";
 import { AUTH_PATH } from "./type";
 

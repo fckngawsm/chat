@@ -1,11 +1,13 @@
 import { CaretRight } from "@phosphor-icons/react";
-import { Search } from "../../Search/Search";
+import { useNavigate } from "react-router-dom";
+import { Search } from "../../../components/Search/Search";
 import { WrapperMemberHeader, WrapperMemberHeaderProfile } from "./styled";
 
 export const ChatMembersHeader = () => {
+  const navigate = useNavigate();
   return (
     <WrapperMemberHeader>
-      <WrapperMemberHeaderProfile>
+      <WrapperMemberHeaderProfile onClick={() => navigate("/profile")}>
         Профиль
         <CaretRight color="#999999" weight="bold" size={12} cursor="pointer" />
       </WrapperMemberHeaderProfile>

@@ -1,16 +1,16 @@
 import { forwardRef } from "react";
-import { Modal } from "../../Modal/Modal";
-import { DefaultInput } from "../../TextFields/DefaultInput";
+import { Modal } from "../../../components/Modal/Modal";
+import { DefaultInput } from "../../../components/TextFields/DefaultInput";
 import { ModalProps } from "./types";
 
-export const ModalAddUser = forwardRef<HTMLDivElement, ModalProps>(
+export const ModalDeleteUser = forwardRef<HTMLDivElement, ModalProps>(
   (props, ref) => {
     const { errors, onSubmit, register } = props;
 
     return (
       <Modal
-        btnText="Добавить"
-        titleText="Добавить пользователя"
+        btnText="Удалить"
+        titleText="Удалить пользователя"
         onSubmit={onSubmit}
         ref={ref}
       >

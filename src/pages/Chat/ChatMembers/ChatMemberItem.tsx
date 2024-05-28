@@ -1,4 +1,4 @@
-import { Divider } from "../../Divider/Divider";
+import { Divider } from "../../../components/Divider/Divider";
 import {
   MembeLastMessage,
   MemberAvatar,
