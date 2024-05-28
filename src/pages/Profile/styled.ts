@@ -20,6 +20,7 @@ export const StyledProfileInformationAvatar = styled.img`
   justify-content: center;
   align-items: center;
   margin: 0 auto 21px;
+  cursor: pointer;
 `;
 
 export const StyledProfileInformationButton = styled.button`

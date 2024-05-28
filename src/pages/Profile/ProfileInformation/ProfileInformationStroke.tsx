@@ -7,7 +7,7 @@ import {
   StyledProfileInfromationStrokeWrapper,
 } from "./styled";
 
-interface ProfileInformaitonStrokeProps {
+interface ProfileInformationStrokeProps {
   config?: Array<{
     field: string;
     value: string;
@@ -16,10 +16,10 @@ interface ProfileInformaitonStrokeProps {
   onlyRead?: boolean;
 }
 
-export const ProfileInformaitonStroke = ({
+export const ProfileInformationStroke = ({
   config = ProfileConfig,
   onlyRead,
-}: ProfileInformaitonStrokeProps) => {
+}: ProfileInformationStrokeProps) => {
   return (
     <StyledProfileInfromationStrokeWrapper>
       {config.map(({ field, value, type }, index) => (

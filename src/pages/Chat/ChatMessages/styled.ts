@@ -121,3 +121,18 @@ export const ChatDialogMessageDate = styled.h4<{ isMyMessage?: boolean }>`
 export const ChatDialogMessageContent = styled.div`
   flex-grow: 1;
 `;
+
+export const StyledUploadText = styled.h2`
+  font-size: 12px;
+  line-height: 1.2;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #3369f3;
+  width: 122px;
+  font-weight: 500;
+  word-wrap: break-word;
+  text-decoration: underline;
+  text-decoration-color: #3369f3;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+`;
