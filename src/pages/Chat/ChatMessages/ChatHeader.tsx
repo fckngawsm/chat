@@ -1,6 +1,6 @@
 import { DotsThreeVertical, Plus, X } from "@phosphor-icons/react";
 import { useMemo } from "react";
-import { useForm } from "react-hook-form";
+import { FieldError, useForm } from "react-hook-form";
 import { Divider } from "../../../components/Divider/Divider";
 import { Menu } from "../../../components/Menu/Menu";
 import { CircleContainer } from "../../../components/Menu/styled";
@@ -96,7 +96,7 @@ export const ChatHeader = () => {
       {modalAddUserIsOpen && (
         <ModalAddUser
           ref={modalAddUserRef}
-          errors={errors["login"]}
+          errors={errors["login"] as FieldError}
           onSubmit={handleSubmit(onSubmit)}
           register={register}
         />
@@ -104,7 +104,7 @@ export const ChatHeader = () => {
       {modalDeleteUserIsOpen && (
         <ModalDeleteUser
           ref={modalDeleteUserRef}
-          errors={errors["login"]}
+          errors={errors["login"] as FieldError}
           onSubmit={handleSubmit(onSubmitDeleteUser)}
           register={register}
         />

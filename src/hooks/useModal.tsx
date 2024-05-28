@@ -21,9 +21,6 @@ export const useModal = () => {
     (event: MouseEvent) => {
       if (modalRef.current) {
         const isClickInside = modalRef.current.contains(event.target as Node);
-        console.log("Modal reference:", modalRef.current);
-        console.log("Event target:", event.target);
-        console.log("Is click inside modal:", isClickInside);
         if (!isClickInside) {
           closeModal();
         }

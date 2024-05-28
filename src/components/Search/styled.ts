@@ -31,8 +31,8 @@ export const StyledSearch = styled.input<{
     raduiusSize && raduiusSize === "s"
       ? "5px"
       : raduiusSize === "l"
-      ? "30px"
-      : "15px"};
+        ? "30px"
+        : "15px"};
   padding: 10px 10px 10px ${(props) => (props.isFocused ? "32px" : "32px")};
   background-color: #efefef;
   color: #1e1e1e;
