@@ -1,6 +1,7 @@
 import { FieldError, useForm } from "react-hook-form";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LOGIN_TEXT, REGISTER_TEXT } from "../../constants/auth";
+import { loginUser, registerUser } from "../../services/api/auth";
 import { getInputsByNavigePlacement } from "./InputConfig";
 import {
   AuthButton,
@@ -23,7 +24,7 @@ export const Auth = () => {
     : `/${LOGIN_TEXT.link}`;
 
   const config = getInputsByNavigePlacement(pathname);
-
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -33,10 +34,41 @@ export const Auth = () => {
     mode: "onSubmit",
   });
 
-  const onSubmit = (data: any) => {
-    console.log("Form data:", data);
+  const handeLogin = async (data: any) => {
+    try {
+      const res = await loginUser(data);
+      localStorage.setItem("jwt", res.data.token);
+      navigate("/");
+      return res.data.token;
+    } catch (err) {
+      console.error("Ошибка при вход", err);
+    }
   };
 
+  const handeRegister = async (data: any) => {
+    try {
+      const res = await registerUser(data);
+      reset();
+      navigate("/sign-in");
+      return res.data.message;
+    } catch (err) {
+      console.error("Ошибка при регистрации", err);
+    }
+  };
+
+  const onSubmit = async (data: any) => {
+    console.log("onSubmit", data);
+    try {
+      if (isLogin) {
+        await handeLogin(data);
+      } else {
+        await handeRegister(data);
+      }
+    } catch (error) {
+      console.error("Ошибка авторизации или регистрации", error);
+    }
+  };
+  console.log(config, "config");
   return (
     <PageWrapper>
       <AuthWrapper>
@@ -74,7 +106,7 @@ export const Auth = () => {
               <AuthButton type="submit" isOutlined>
                 {AUTH_TEXT.authorization}
               </AuthButton>
-              <Link onClick={reset} to={REDIRECT_LINK}>
+              <Link to={REDIRECT_LINK}>
                 <AuthButton isOutlined={false}>{AUTH_TEXT.redirect}</AuthButton>
               </Link>
             </AuthWrapperButtons>

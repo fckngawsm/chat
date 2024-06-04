@@ -32,8 +32,24 @@ export class UsersService {
     return foundedUser;
   }
 
+  async findCandidate(
+    phone: string,
+    login: string,
+    email: string,
+  ): Promise<User> {
+    const foundedUser = await this.userRepository.findOne({
+      where: {
+        phone,
+        email,
+        login,
+      },
+    });
+    return foundedUser;
+  }
   async findByPhone(phone: string): Promise<User> {
-    const foundedUser = await this.userRepository.findOneBy({ phone });
+    const foundedUser = await this.userRepository.findOneBy({
+      phone,
+    });
     return foundedUser;
   }
 

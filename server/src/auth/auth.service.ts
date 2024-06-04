@@ -17,11 +17,12 @@ export class AuthService {
       email: user.email,
       id: user.id,
     };
-    return this.jwtService.sign(payload, { secret: process.env.SECRET });
+    return this.jwtService.sign(payload, { secret: 'secret' });
   }
 
   async login(dto: CreateUserDto) {
     const user = await this.userService.findByPhone(dto.phone);
+
     if (!user) {
       throw new HttpException(
         'Неверный email или пароль',
@@ -40,11 +41,16 @@ export class AuthService {
       );
     }
     const token = await this.generateToken(user);
+    console.log(token, 'token');
     return { token };
   }
 
   async register(dto: CreateUserDto) {
-    const condtidate = await this.userService.findByPhone(dto?.phone);
+    const condtidate = await this.userService.findCandidate(
+      dto.phone,
+      dto.email,
+      dto.login,
+    );
     if (condtidate) {
       throw new HttpException(
         'Пользователь с таким номером телефона уже зарегестрирован',
