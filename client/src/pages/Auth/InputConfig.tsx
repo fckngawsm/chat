@@ -21,18 +21,18 @@ export interface InputConfig {
 const inputConfig: InputConfig[] = [
   // login
   {
-    id: "login",
-    label: "Логин",
-    inputType: "text",
-    placeholder: "Логин",
+    id: "phone",
+    label: "Телефон",
+    inputType: "tel",
+    placeholder: "Телефон",
     placementComponent: "login",
     InputComponent: DefaultInput,
     validationRules: {
-      required: "Укажите логин",
+      required: "Укажите Телефон",
     },
   },
   {
-    id: "password-l",
+    id: "password",
     label: "Пароль",
     inputType: "password",
     placeholder: "Пароль",
@@ -127,17 +127,6 @@ const inputConfig: InputConfig[] = [
     InputComponent: DefaultInput,
     validationRules: {
       required: "Вы забыли про пароль",
-    },
-  },
-  {
-    id: "password-repeat",
-    label: "Пароль (еще раз)",
-    inputType: "password",
-    placeholder: "Пароль (еще раз)",
-    placementComponent: "register",
-    InputComponent: DefaultInput,
-    validationRules: {
-      required: "Повторите пароль",
     },
   },
 ];
