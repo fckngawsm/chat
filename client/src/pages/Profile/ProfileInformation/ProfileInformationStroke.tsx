@@ -1,5 +1,4 @@
 import { Divider } from "../../../components/Divider/Divider";
-import { ProfileConfig } from "../constants/informationConfig";
 import {
   StyledProfileInfromationItemInput,
   StyledProfileInfromationItemTitle,
@@ -8,7 +7,7 @@ import {
 } from "./styled";
 
 interface ProfileInformationStrokeProps {
-  config?: Array<{
+  config: Array<{
     field: string;
     value: string;
     type: string;
@@ -17,7 +16,7 @@ interface ProfileInformationStrokeProps {
 }
 
 export const ProfileInformationStroke = ({
-  config = ProfileConfig,
+  config,
   onlyRead,
 }: ProfileInformationStrokeProps) => {
   return (
@@ -34,7 +33,7 @@ export const ProfileInformationStroke = ({
               disabled={onlyRead}
             />
           </StyledProfileInfromationStrokeItem>
-          {index < ProfileConfig.length - 1 && <Divider fullWidth />}
+          {index < config.length - 1 && <Divider fullWidth />}
         </>
       ))}
     </StyledProfileInfromationStrokeWrapper>

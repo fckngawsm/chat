@@ -2,8 +2,8 @@ import React, { FC, ReactNode, createContext, useState } from "react";
 import { User } from "../types/user";
 
 type UserContextType = {
-  user: Partial<User>;
-  setUser: React.Dispatch<React.SetStateAction<Partial<User>>>;
+  user: User;
+  setUser: React.Dispatch<React.SetStateAction<User>>;
 };
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -11,7 +11,7 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 export const UserContextProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [user, setUser] = useState<Partial<User>>({
+  const [user, setUser] = useState<User>({
     avatar: "",
     email: "",
     lastname: "",
