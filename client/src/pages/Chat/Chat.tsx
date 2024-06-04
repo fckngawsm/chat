@@ -21,7 +21,6 @@ export const Chat = () => {
     fetchUserData();
   }, []);
 
-  console.log(user, "user");
   return (
     <ChatWrapper>
       <ChatMembersList>

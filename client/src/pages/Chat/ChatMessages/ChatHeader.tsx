@@ -64,12 +64,10 @@ export const ChatHeader = () => {
   );
 
   const onSubmit = (data: any) => {
-    console.log(data);
     closeAddUserModal();
   };
 
   const onSubmitDeleteUser = (data: any) => {
-    console.log(data);
     closeDeleteUserModal();
   };
 

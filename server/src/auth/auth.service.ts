@@ -41,7 +41,6 @@ export class AuthService {
       );
     }
     const token = await this.generateToken(user);
-    console.log(token, 'token');
     return { token };
   }
 

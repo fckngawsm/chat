@@ -21,7 +21,6 @@ export class AuthController {
   @UseGuards(AuthGuard)
   @Get('me')
   async getMe(@Req() request: Request) {
-    console.log(request.user.id);
     const userId = request.user.id;
     return this.authService.getMe(userId);
   }

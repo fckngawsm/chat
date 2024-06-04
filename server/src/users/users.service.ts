@@ -13,9 +13,7 @@ export class UsersService {
 
   async createUser(userDto: CreateUserDto): Promise<User> {
     const user = this.userRepository.create(userDto);
-    console.log('Созданный пользователь:', user); // Логируем созданный объект
     await this.userRepository.save(user);
-    console.log('Пользователь сохранен в БД'); // Логируем после сохранения
     return user;
   }
 

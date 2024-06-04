@@ -57,7 +57,6 @@ export const Auth = () => {
   };
 
   const onSubmit = async (data: any) => {
-    console.log("onSubmit", data);
     try {
       if (isLogin) {
         await handeLogin(data);
@@ -68,7 +67,6 @@ export const Auth = () => {
       console.error("Ошибка авторизации или регистрации", error);
     }
   };
-  console.log(config, "config");
   return (
     <PageWrapper>
       <AuthWrapper>
