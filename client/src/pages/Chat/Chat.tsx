@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useUserContext } from "../../context/userContext";
+import { useCurrentUser } from "../../context/userContext";
 import { getMe } from "../../services/api/auth";
 import { ChatMemberItem } from "./ChatMembers/ChatMemberItem";
 import { ChatMembersList } from "./ChatMembers/ChatMembersList";
@@ -7,7 +7,7 @@ import { ChatWrapper } from "./ChatMembers/styled";
 import { ChatMessages } from "./ChatMessages/ChatMessages";
 
 export const Chat = () => {
-  const { user, setUser } = useUserContext();
+  const { user, setUser } = useCurrentUser();
   useEffect(() => {
     const fetchUserData = async () => {
       try {
