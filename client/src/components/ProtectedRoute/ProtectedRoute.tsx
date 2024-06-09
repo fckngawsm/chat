@@ -1,10 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useCurrentUser } from "../../context/userContext";
 
 const ProtectedRoute = () => {
-  const { user } = useCurrentUser();
+  const jwt = localStorage.getItem("jwt");
 
-  return user.email ? <Outlet /> : <Navigate to="/sign-in" replace />;
+  return jwt ? <Outlet /> : <Navigate to="/sign-in" replace />;
 };
 
 export default ProtectedRoute;

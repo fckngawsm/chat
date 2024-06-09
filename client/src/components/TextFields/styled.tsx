@@ -1,6 +1,6 @@
 import { FieldError } from "react-hook-form";
+import InputMask from "react-input-mask";
 import styled from "styled-components";
-
 interface InputProps {
   error: FieldError;
 }
@@ -18,12 +18,44 @@ export const InputLabel = styled.label<{ isFocused: boolean }>`
   color: #999999;
   position: absolute;
   bottom: 28px;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   visibility: ${({ isFocused }) => (!isFocused ? "hidden" : "visible")};
   opacity: ${({ isFocused }) => (!isFocused ? 0 : 1)};
 `;
 
 export const StyledInput = styled.input<InputProps>`
+  border: none;
+  padding: 7px 0;
+  border-bottom: 1px solid;
+  width: 100%;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  border-color: ${({ error }) => (error ? "#FF2F2F" : "#3369F3")};
+  color: ${({ error }) => (error ? "#FF2F2F" : "#1E1E1E")};
+  &::placeholder,
+  ::-webkit-input-placeholder {
+    color: #999999;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: #999999;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+`;
+
+export const StyledInputMask = styled(InputMask)`
   border: none;
   padding: 7px 0;
   border-bottom: 1px solid;
