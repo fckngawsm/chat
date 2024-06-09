@@ -104,7 +104,7 @@ export const Auth = () => {
               <AuthButton type="submit" isOutlined>
                 {AUTH_TEXT.authorization}
               </AuthButton>
-              <Link to={REDIRECT_LINK}>
+              <Link onClick={() => reset()} to={REDIRECT_LINK}>
                 <AuthButton isOutlined={false}>{AUTH_TEXT.redirect}</AuthButton>
               </Link>
             </AuthWrapperButtons>

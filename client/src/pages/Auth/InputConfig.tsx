@@ -3,6 +3,7 @@ import {
   CustomInputProps,
   DefaultInput,
 } from "../../components/TextFields/DefaultInput";
+import { PhoneMaskInput } from "../../components/TextFields/PhoneMaskInput";
 import { AUTH_PLACEMENT } from "./constants";
 import { AUTH_PATH } from "./type";
 
@@ -26,9 +27,12 @@ const inputConfig: InputConfig[] = [
     inputType: "tel",
     placeholder: "Телефон",
     placementComponent: "login",
-    InputComponent: DefaultInput,
+    InputComponent: PhoneMaskInput,
     validationRules: {
-      required: "Укажите Телефон",
+      pattern: {
+        value: /^\+7 \d{3} \d{3} \d{2} \d{2}$/,
+        message: "Укажите номера телефона в формате +7 xxx xxx xx xx",
+      },
     },
   },
   {
@@ -105,16 +109,11 @@ const inputConfig: InputConfig[] = [
     inputType: "tel",
     placeholder: "Телефон",
     placementComponent: "register",
-    InputComponent: DefaultInput,
+    InputComponent: PhoneMaskInput,
     validationRules: {
-      required: "Укажите Телефон",
-      maxLength: {
-        value: 11,
-        message: "Имя должго содержать максимум 11 символов",
-      },
-      minLength: {
-        value: 11,
-        message: "Имя должго содержать минимум 11 символов",
+      pattern: {
+        value: /^\+7 \d{3} \d{3} \d{2} \d{2}$/,
+        message: "Укажите номера телефона в формате +7 xxx xxx xx xx",
       },
     },
   },
