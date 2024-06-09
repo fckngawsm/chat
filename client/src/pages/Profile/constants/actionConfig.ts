@@ -13,5 +13,6 @@ export const actionConfig = [
     title: "Выйти",
     isDangares: true,
     link: "/sign-in",
+    isLogout: true,
   },
 ];

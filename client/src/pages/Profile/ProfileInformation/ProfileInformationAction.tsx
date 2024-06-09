@@ -15,10 +15,10 @@ export const ProfileInformationAction = () => {
 
   return (
     <ProfileInfromationActionWrapper>
-      {actionConfig.map(({ title, isDangares, link }, index) => (
+      {actionConfig.map(({ title, isDangares, link, isLogout }, index) => (
         <>
           <ProfileInformationItem
-            onClick={link ? handleClick : null}
+            onClick={isLogout ? handleClick : null}
             to={link}
             isDangares={isDangares}
           >

@@ -19,6 +19,7 @@ export const ProfileInformationStroke = ({
   config,
   onlyRead,
 }: ProfileInformationStrokeProps) => {
+  console.log(config, "config");
   return (
     <StyledProfileInfromationStrokeWrapper>
       {config.map(({ field, value, type }, index) => (
