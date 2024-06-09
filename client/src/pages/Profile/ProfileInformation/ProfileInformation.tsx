@@ -1,4 +1,4 @@
-import { useUserContext } from "../../../context/userContext";
+import { useCurrentUser } from "../../../context/userContext";
 import { useModal } from "../../../hooks/useModal";
 import { ModalAddAvatar } from "../../Chat/ChatMessages/Modal/ModalAddAvatar";
 import { getProfileInformation } from "../constants/informationConfig";
@@ -12,7 +12,7 @@ import { StyledProfileInformationName } from "./styled";
 
 export const ProfileInformation = () => {
   const { isOpen, modalRef, openModal } = useModal();
-  const { user } = useUserContext();
+  const { user } = useCurrentUser();
   const config = getProfileInformation(user);
 
   return (

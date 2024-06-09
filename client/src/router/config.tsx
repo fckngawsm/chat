@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import { Chat } from "../pages/Chat/Chat";
 import { Profile } from "../pages/Profile/Profile";
 import { ProfileInformation } from "../pages/Profile/ProfileInformation/ProfileInformation";
@@ -9,23 +10,29 @@ import { authRoutes } from "./authRoutes";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Chat />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
+    element: <ProtectedRoute />,
     children: [
       {
-        index: true,
-        element: <ProfileInformation />,
+        path: "/",
+        element: <Chat />,
       },
       {
-        path: "settings",
-        element: <ProfileSettings />,
-      },
-      {
-        path: "password",
-        element: <ProfilePassword />,
+        path: "/profile",
+        element: <Profile />,
+        children: [
+          {
+            index: true,
+            element: <ProfileInformation />,
+          },
+          {
+            path: "settings",
+            element: <ProfileSettings />,
+          },
+          {
+            path: "password",
+            element: <ProfilePassword />,
+          },
+        ],
       },
     ],
   },

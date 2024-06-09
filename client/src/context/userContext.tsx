@@ -27,10 +27,10 @@ export const UserContextProvider: FC<{ children: ReactNode }> = ({
   );
 };
 
-export const useUserContext = () => {
+export const useCurrentUser = () => {
   const context = React.useContext(UserContext);
   if (!context) {
-    throw new Error("useUserContext must be used within a UserContextProvider");
+    throw new Error("useCurrentUser must be used within a UserContextProvider");
   }
   return context;
 };
