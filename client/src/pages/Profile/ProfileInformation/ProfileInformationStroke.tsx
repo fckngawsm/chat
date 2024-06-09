@@ -7,7 +7,7 @@ import {
 } from "./styled";
 
 interface ProfileInformationStrokeProps {
-  config: Array<{
+  config?: Array<{
     field: string;
     value: string;
     type: string;

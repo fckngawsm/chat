@@ -5,11 +5,15 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.enableCors({
+  const options = {
     origin: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    preflightContinue: false,
     credentials: true,
-  });
-  await app.listen(process.env.PORT);
+    optionsSuccessStatus: 200,
+  };
+
+  app.enableCors(options);
+  await app.listen(process.env.PORT || 8000);
 }
 bootstrap();

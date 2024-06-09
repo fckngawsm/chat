@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
 import { User } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -15,9 +15,9 @@ import { AuthModule } from './auth/auth.module';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {
         const config = {
-          type: configService.get<string>('DATABASE_TYPE') as 'postgres',
-          host: configService.get<string>('DATABASE_HOST'),
-          port: configService.get<number>('DATABASE_PORT'),
+          type: configService.get<string>('DATABASE_TYPE') as 'postgres', // postgres
+          host: 'db',
+          port: 5432, // 5432
           username: configService.get<string>('DATABASE_USERNAME'),
           password: configService.get<string>('DATABASE_PASSWORD'),
           database: configService.get<string>('DATABASE_NAME_DB'),
