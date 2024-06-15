@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1718483156416" clover="3.2.0">
+  <project timestamp="1718483156416" name="All files">
+    <metrics statements="106" coveredstatements="99" conditionals="41" coveredconditionals="25" methods="27" coveredmethods="22" elements="174" coveredelements="146" complexity="0" loc="106" ncloc="106" packages="8" files="15" classes="15"/>
+    <package name="components.Divider">
+      <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="Divider.tsx" path="/Users/kirill/dev/chat/client/src/components/Divider/Divider.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="styled.ts" path="/Users/kirill/dev/chat/client/src/components/Divider/styled.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="1"/>
+      </file>
+    </package>
+    <package name="components.Menu">
+      <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="3" methods="6" coveredmethods="6"/>
+      <file name="Menu.tsx" path="/Users/kirill/dev/chat/client/src/components/Menu/Menu.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+      </file>
+      <file name="MenuChildren.tsx" path="/Users/kirill/dev/chat/client/src/components/Menu/MenuChildren.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="styled.ts" path="/Users/kirill/dev/chat/client/src/components/Menu/styled.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Modal">
+      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="Modal.tsx" path="/Users/kirill/dev/chat/client/src/components/Modal/Modal.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+      <file name="styled.ts" path="/Users/kirill/dev/chat/client/src/components/Modal/styled.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Search">
+      <metrics statements="16" coveredstatements="14" conditionals="15" coveredconditionals="11" methods="7" coveredmethods="5"/>
+      <file name="Search.tsx" path="/Users/kirill/dev/chat/client/src/components/Search/Search.tsx">
+        <metrics statements="7" coveredstatements="5" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="styled.ts" path="/Users/kirill/dev/chat/client/src/components/Search/styled.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="12" coveredconditionals="8" methods="4" coveredmethods="4"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="33" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="38" count="5" type="cond" truecount="1" falsecount="1"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="22" coveredstatements="17" conditionals="6" coveredconditionals="2" methods="6" coveredmethods="3"/>
+      <file name="useDialog.tsx" path="/Users/kirill/dev/chat/client/src/hooks/useDialog.tsx">
+        <metrics statements="22" coveredstatements="17" conditionals="6" coveredconditionals="2" methods="6" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.Chat.ChatBottomPart">
+      <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="ChatBottomPart.tsx" path="/Users/kirill/dev/chat/client/src/pages/Chat/ChatBottomPart/ChatBottomPart.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+      <file name="styled.ts" path="/Users/kirill/dev/chat/client/src/pages/Chat/ChatBottomPart/styled.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.Chat.ChatMembersTop">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="ChatMembersHeader.tsx" path="/Users/kirill/dev/chat/client/src/pages/Chat/ChatMembersTop/ChatMembersHeader.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="styled.ts" path="/Users/kirill/dev/chat/client/src/pages/Chat/ChatMembersTop/styled.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utlis">
+      <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="testing.tsx" path="/Users/kirill/dev/chat/client/src/utlis/testing.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

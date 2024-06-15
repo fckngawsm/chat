@@ -21,13 +21,19 @@ export const Search = ({
 
   return (
     <StyledSearchContainer>
-      {viewIcon && <StyledIcon size={20} isFocused={isFocused} />}
+      {viewIcon && (
+        <StyledIcon
+          size={20}
+          $isFocused={isFocused}
+          data-testid="search-icon"
+        />
+      )}
       <StyledSearch
         placeholder={placeholder}
-        raduiusSize={raduiusSize}
+        $raduiusSize={raduiusSize}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        isFocused={isFocused}
+        $isFocused={isFocused}
       />
     </StyledSearchContainer>
   );

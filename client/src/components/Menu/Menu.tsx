@@ -12,8 +12,10 @@ interface MenuProps {
 export const Menu = memo(({ config, placement }: MenuProps) => {
   return (
     <MenuWrapper placement={placement}>
-      {config.map((item) => (
-        <MenuChildren {...item} />
+      {config.map((item, index) => (
+        <div key={index}>
+          <MenuChildren {...item} />
+        </div>
       ))}
     </MenuWrapper>
   );
