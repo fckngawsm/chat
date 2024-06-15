@@ -8,7 +8,6 @@ export default {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
   },
-  collectCoverage: true,
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   moduleFileExtensions: [
     "tsx",
