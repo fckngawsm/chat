@@ -1,5 +1,5 @@
+import { Modal } from "@/components/Modal/Modal";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Modal } from "../components/Modal/Modal";
 
 describe("render Modal component", () => {
   it("should correctly render component and handle form submission", () => {

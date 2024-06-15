@@ -1,6 +1,6 @@
+import { useCurrentUser } from "@/context/userContext";
+import { getMe } from "@/services/api/auth";
 import { useEffect } from "react";
-import { useCurrentUser } from "../../context/userContext";
-import { getMe } from "../../services/api/auth";
 import { ChatMemberItem } from "./ChatMembers/ChatMemberItem";
 import { ChatMembersList } from "./ChatMembers/ChatMembersList";
 import { ChatWrapper } from "./ChatMembers/styled";

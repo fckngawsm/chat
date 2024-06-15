@@ -1,6 +1,6 @@
+import { Modal } from "@/components/Modal/Modal";
+import { DefaultInput } from "@/components/TextFields/DefaultInput";
 import { forwardRef } from "react";
-import { Modal } from "../../../components/Modal/Modal";
-import { DefaultInput } from "../../../components/TextFields/DefaultInput";
 import { ModalProps } from "./types";
 
 export const ModalAddUser = forwardRef<HTMLDivElement, ModalProps>(

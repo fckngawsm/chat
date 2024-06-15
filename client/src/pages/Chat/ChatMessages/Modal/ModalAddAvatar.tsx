@@ -1,5 +1,5 @@
+import { Modal } from "@/components/Modal/Modal";
 import { forwardRef, useRef, useState } from "react";
-import { Modal } from "../../../../components/Modal/Modal";
 import { StyledUploadText } from "../styled";
 
 export const ModalAddAvatar = forwardRef<HTMLDivElement>((_, ref) => {

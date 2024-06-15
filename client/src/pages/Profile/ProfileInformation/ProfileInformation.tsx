@@ -1,6 +1,6 @@
-import { useCurrentUser } from "../../../context/userContext";
-import { useModal } from "../../../hooks/useModal";
-import { ModalAddAvatar } from "../../Chat/ChatMessages/Modal/ModalAddAvatar";
+import { useCurrentUser } from "@/context/userContext";
+import { useModal } from "@/hooks/useModal";
+import { ModalAddAvatar } from "@/pages/Chat/ChatMessages/Modal/ModalAddAvatar";
 import { getProfileInformation } from "../constants/informationConfig";
 import {
   StyledProfileInformation,

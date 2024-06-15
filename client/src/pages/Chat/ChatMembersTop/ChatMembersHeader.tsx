@@ -1,6 +1,6 @@
+import { Search } from "@/components/Search/Search";
 import { CaretRight } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
-import { Search } from "../../../components/Search/Search";
 import { WrapperMemberHeader, WrapperMemberHeaderProfile } from "./styled";
 
 export const ChatMembersHeader = () => {
