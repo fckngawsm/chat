@@ -10,13 +10,13 @@ import {
 
 interface ModalProps {
   children: React.ReactNode;
-  isError?: boolean;
-  titleErrorText?: string;
   titleText: string;
+  onSubmit: (fn: any) => void;
+  titleErrorText?: string;
   btnText: string;
+  isError?: boolean;
   hintIsVisible?: boolean;
   hintText?: string;
-  onSubmit: (fn: any) => void;
 }
 
 export const Modal = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
@@ -32,12 +32,12 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
   } = props;
 
   return (
-    <ModalWrapper ref={ref}>
+    <ModalWrapper ref={ref} data-testid="modal">
       <ModalContent>
         <ModalTitle>{isError ? titleErrorText : titleText}</ModalTitle>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} aria-label="form">
           <ModalChildren>{children}</ModalChildren>
-          <ModalButton>{btnText}</ModalButton>
+          <ModalButton type="submit">{btnText}</ModalButton>
         </form>
         {hintIsVisible && <ModalHintText>{hintText}</ModalHintText>}
       </ModalContent>

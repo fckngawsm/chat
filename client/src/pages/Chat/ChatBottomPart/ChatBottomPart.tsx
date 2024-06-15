@@ -37,9 +37,12 @@ export const ChatBottomPart = () => {
             color={dialogIsOpen ? "#3369F3" : "#999999"}
             size={32}
             onClick={() => setDialogIsOpen(true)}
+            data-testid="menu-attach"
           />
         </div>
-        {dialogIsOpen && <Menu placement="top" config={config} />}
+        {dialogIsOpen && (
+          <Menu placement="top" config={config} data-testid="menu" />
+        )}
         <Search placeholder="Сообщение" raduiusSize="l" viewIcon={false} />
         <ChatBottomPartSubmitButton>
           <ArrowRight color="#FFFFFF" size={15} />
