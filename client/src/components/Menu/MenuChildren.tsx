@@ -1,4 +1,4 @@
-import { MenuConfig } from "../../types/menu-config";
+import { MenuConfig } from "@/types/menu-config";
 import {
   CircleContainer,
   MenuChildrenText,

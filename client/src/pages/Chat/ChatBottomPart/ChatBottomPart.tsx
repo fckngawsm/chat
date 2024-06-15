@@ -1,9 +1,9 @@
+import { Divider } from "@/components/Divider/Divider";
+import { Menu } from "@/components/Menu/Menu";
+import { Search } from "@/components/Search/Search";
+import { useDialog } from "@/hooks/useDialog";
+import { MenuConfig } from "@/types/menu-config";
 import { ArrowRight, File, Gps, Image } from "@phosphor-icons/react";
-import { Divider } from "../../../components/Divider/Divider";
-import { Menu } from "../../../components/Menu/Menu";
-import { Search } from "../../../components/Search/Search";
-import { useDialog } from "../../../hooks/useDialog";
-import { MenuConfig } from "../../../types/menu-config";
 import {
   ChatBottomPartAttachButton,
   ChatBottomPartSubmitButton,

@@ -1,5 +1,5 @@
+import { MenuConfig } from "@/types/menu-config";
 import { memo } from "react";
-import { MenuConfig } from "../../types/menu-config";
 import { MenuChildren } from "./MenuChildren";
 import { MenuWrapper } from "./styled";
 import { MenuPlacement } from "./type";

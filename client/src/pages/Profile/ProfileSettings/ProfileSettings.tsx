@@ -1,4 +1,4 @@
-import { useCurrentUser } from "../../../context/userContext";
+import { useCurrentUser } from "@/context/userContext";
 import { ProfileInformationStroke } from "../ProfileInformation/ProfileInformationStroke";
 import { getProfileInformation } from "../constants/informationConfig";
 import {

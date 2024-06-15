@@ -1,6 +1,6 @@
+import { renderWithRouter } from "@/utlis/testing";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { createMemoryHistory } from "history";
-import { renderWithRouter } from "../../utlis/testing";
 import { ChatBottomPart } from "../Chat/ChatBottomPart/ChatBottomPart";
 import { ChatMembersHeader } from "../Chat/ChatMembersTop/ChatMembersHeader";
 

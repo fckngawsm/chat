@@ -1,5 +1,5 @@
+import { User } from "@/types/user";
 import React, { FC, ReactNode, createContext, useState } from "react";
-import { User } from "../types/user";
 
 type UserContextType = {
   user: User;
