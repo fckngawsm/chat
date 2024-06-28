@@ -10,12 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.7
 
-      - name: Move to client directory
-        working-directory: client
-        run: pwd
-
       - name: Install dependencies
+        working-directory: client
         run: npm install
 
       - name: Lint
+        working-directory: client
         run: npm run lint
