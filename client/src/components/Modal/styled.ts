@@ -12,7 +12,9 @@ export const ModalWrapper = styled.div`
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
   visibility: visible;
-  transition: visibility 0.3s, opacity 0.4s ease-in;
+  transition:
+    visibility 0.3s,
+    opacity 0.4s ease-in;
   z-index: 2;
 `;
 

@@ -25,5 +25,5 @@ export const ModalDeleteUser = forwardRef<HTMLDivElement, ModalProps>(
         />
       </Modal>
     );
-  }
+  },
 );

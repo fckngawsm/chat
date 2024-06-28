@@ -61,14 +61,14 @@ export const ChatHeader = () => {
         },
       },
     ],
-    [openAddUserModal, openDeleteUserModal, setDialogIsOpen]
+    [openAddUserModal, openDeleteUserModal, setDialogIsOpen],
   );
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     closeAddUserModal();
   };
 
-  const onSubmitDeleteUser = (data: any) => {
+  const onSubmitDeleteUser = () => {
     closeDeleteUserModal();
   };
 

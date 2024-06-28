@@ -7,7 +7,7 @@ import { ChatWrapper } from "./ChatMembers/styled";
 import { ChatMessages } from "./ChatMessages/ChatMessages";
 
 export const Chat = () => {
-  const { user, setUser } = useCurrentUser();
+  const { setUser } = useCurrentUser();
   useEffect(() => {
     const fetchUserData = async () => {
       try {

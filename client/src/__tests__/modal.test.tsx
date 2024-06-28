@@ -10,7 +10,7 @@ describe("render Modal component", () => {
         children={<input aria-label="name" />}
         onSubmit={mockSubmit}
         titleText="My title"
-      />
+      />,
     );
 
     // Имитируем ввод данных в поле input

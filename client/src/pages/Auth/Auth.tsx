@@ -83,7 +83,7 @@ export const Auth = () => {
                   id,
                   validationRules,
                 },
-                index
+                index,
               ) => {
                 return (
                   <InputComponent
@@ -97,7 +97,7 @@ export const Auth = () => {
                     error={errors[id] as FieldError}
                   />
                 );
-              }
+              },
             )}
             <AuthEmptySpace />
             <AuthWrapperButtons>

@@ -1,9 +1,8 @@
 import { Modal } from "@/components/Modal/Modal";
-import { forwardRef, useRef, useState } from "react";
+import { forwardRef, useRef } from "react";
 import { StyledUploadText } from "../styled";
 
 export const ModalAddAvatar = forwardRef<HTMLDivElement>((_, ref) => {
-  const [selectedAvatar, setSelectedAvatar] = useState(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const handleOpenInputFile = () => {
     fileRef.current?.click();

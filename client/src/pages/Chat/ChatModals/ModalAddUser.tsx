@@ -25,5 +25,5 @@ export const ModalAddUser = forwardRef<HTMLDivElement, ModalProps>(
         />
       </Modal>
     );
-  }
+  },
 );

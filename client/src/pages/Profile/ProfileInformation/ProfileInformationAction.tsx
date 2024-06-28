@@ -7,7 +7,7 @@ import {
 } from "./styled";
 
 export const ProfileInformationAction = () => {
-  const { setUser, user } = useCurrentUser();
+  const { setUser } = useCurrentUser();
   const handleClick = () => {
     localStorage.removeItem("jwt");
     setUser(null);

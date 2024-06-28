@@ -133,5 +133,5 @@ const inputConfig: InputConfig[] = [
 export const getInputsByNavigePlacement = (path: string) =>
   inputConfig.filter(
     ({ placementComponent }) =>
-      placementComponent === AUTH_PLACEMENT[path.toString() as AUTH_PATH]
+      placementComponent === AUTH_PLACEMENT[path.toString() as AUTH_PATH],
   );

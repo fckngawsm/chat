@@ -15,14 +15,14 @@ export const renderWithRouter = (
     route = "/",
     history = createMemoryHistory({ initialEntries: [route] }),
     ...renderOptions
-  }: RenderWithRouterOptions = {}
+  }: RenderWithRouterOptions = {},
 ) => {
   return {
     ...render(
       <Router location={history.location} navigator={history}>
         {ui}
       </Router>,
-      renderOptions
+      renderOptions,
     ),
     history,
   };

@@ -14,7 +14,7 @@ export const useDialog = () => {
         handleClose();
       }
     },
-    [handleClose]
+    [handleClose],
   );
 
   const handleKeyDown = useCallback(
@@ -23,7 +23,7 @@ export const useDialog = () => {
         handleClose();
       }
     },
-    [handleClose]
+    [handleClose],
   );
 
   useEffect(() => {

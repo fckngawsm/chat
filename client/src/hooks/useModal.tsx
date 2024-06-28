@@ -13,7 +13,7 @@ export const useModal = () => {
         closeModal();
       }
     },
-    [closeModal]
+    [closeModal],
   );
 
   // TODO: пофиксить
@@ -26,7 +26,7 @@ export const useModal = () => {
         }
       }
     },
-    [closeModal]
+    [closeModal],
   );
 
   useEffect(() => {
