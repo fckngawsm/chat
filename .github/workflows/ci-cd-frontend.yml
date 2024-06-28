@@ -17,3 +17,17 @@ jobs:
       - name: Lint
         working-directory: client
         run: npm run lint
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+
+      - name: Install dependencies
+        working-directory: client
+        run: npm install
+
+      - name: Testing
+        working-directory: client
+        run: npm run test
