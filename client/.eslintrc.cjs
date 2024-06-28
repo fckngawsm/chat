@@ -1,16 +1,8 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   env: { node: true, "jest/globals": true },
-  extends: [
-    "prettier",
-    "plugin:@typescript-eslint/recommended",
-  ],
-  plugins: [
-    "prettier",
-    "@typescript-eslint",
-    "react",
-    "jest",
-  ],
+  extends: ["prettier", "plugin:@typescript-eslint/recommended"],
+  plugins: ["prettier", "@typescript-eslint", "react", "jest"],
   rules: {
     "jest/no-focused-tests": "off",
     indent: ["error", 2],
