@@ -40,9 +40,7 @@ export const Auth = () => {
       localStorage.setItem("jwt", res.data.token);
       navigate("/");
       return res.data.token;
-    } catch (err) {
-      console.error("Ошибка при вход", err);
-    }
+    } catch (err) {}
   };
 
   const handeRegister = async (data: any) => {
@@ -51,9 +49,7 @@ export const Auth = () => {
       reset();
       navigate("/sign-in");
       return res.data.message;
-    } catch (err) {
-      console.error("Ошибка при регистрации", err);
-    }
+    } catch (err) {}
   };
 
   const onSubmit = async (data: any) => {
@@ -63,9 +59,7 @@ export const Auth = () => {
       } else {
         await handeRegister(data);
       }
-    } catch (error) {
-      console.error("Ошибка авторизации или регистрации", error);
-    }
+    } catch (error) {}
   };
   return (
     <PageWrapper>

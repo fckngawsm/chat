@@ -13,9 +13,7 @@ export const Chat = () => {
       try {
         const res = await getMe();
         setUser(res.data);
-      } catch (error) {
-        console.error("Ошибка при загрузке данных пользователя", error);
-      }
+      } catch (error) {}
     };
 
     fetchUserData();
