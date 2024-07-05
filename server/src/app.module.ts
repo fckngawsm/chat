@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
+import { ChatGateway } from './chat.gateway';
 import { User } from './users/entities/user.entity';
 import { UsersModule } from './users/users.module';
 
@@ -15,9 +16,9 @@ import { UsersModule } from './users/users.module';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {
         const config = {
-          type: configService.get<string>('DATABASE_TYPE') as 'postgres', // postgres
+          type: configService.get<string>('DATABASE_TYPE') as 'postgres',
           host: 'db',
-          port: 5432, // 5432
+          port: 5432,
           username: configService.get<string>('DATABASE_USERNAME'),
           password: configService.get<string>('DATABASE_PASSWORD'),
           database: configService.get<string>('DATABASE_NAME_DB'),
@@ -31,5 +32,6 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     AuthModule,
   ],
+  providers: [ChatGateway],
 })
 export class AppModule {}

@@ -27,6 +27,7 @@ const config: MenuConfig[] = [
 
 export const ChatBottomPart = () => {
   const { dialogIsOpen, menuRef, setDialogIsOpen } = useDialog();
+
   return (
     <>
       <Divider />
